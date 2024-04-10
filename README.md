@@ -1,6 +1,6 @@
 # Artificial Intelligence Assignment
 
-Team: Chetan Moturi(CS21B017) and MVSK Karthikeya(CS21B033)
+Team: Chetan Moturi(CS21B017) and MVS Karthikeya(CS21B033)
 
 The Projects:
 
