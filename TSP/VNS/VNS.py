@@ -27,7 +27,7 @@ def getDist():
             dist[i][j] = ((map[i][0]-map[j][0])**2 + (map[i][1]-map[j][1])**2)**0.5
     return dist
 
-map = load("../data/eil76.tsp")
+map = load("../data/pr107.tsp")
 
 size = len(map)
 visited = {}
@@ -181,16 +181,22 @@ def main():
     print('It cost ',time_end-time_start,'s',sep='')
     print('You got the best solution:',cost,sep='\n')
     print(path)
-    best = int(input("The best solution should be: "))
-    print("error%:",(cost-best)/best * 100)
+    # best = int(input("The best solution should be: "))
+    # print("error%:",(cost-best)/best * 100)
     x = np.array([map[i][0] for i in path])
     y = np.array([map[i][1] for i in path])
-    i = np.arange(0,len(solutions))
-    solutions = np.array(solutions)
-    plt.subplot(121)
-    plt.plot(x,y)
-    plt.subplot(122)
-    plt.plot(i,solutions)
+    plt.plot(x, y, c='b')
+    plt.scatter(x, y, c='r', s=10)
     plt.show()
+    # i = np.arange(0,len(solutions))
+    # solutions = np.array(solutions)
+    # plt.subplot(121)
+    # plt.plot(x,y)
+    # plt.subplot(122)
+    # plt.plot(i,solutions)
+    # plt.show()
 
-main()
+if __name__ == "__main__":
+    #repeat 10 times
+    for i in range(10):
+        main()
